@@ -13,10 +13,13 @@ python3 port_scanner.py
 Then enter the IP you want to scan when prompted.
 
 ## Sample Output
-Enter the IP you want to scan: scanme.nmap.org
-Scanning scanme.nmap.org...
-Port 53 -- OPEN
-Scan complete!
+- Enter the IP you want to scan: scanme.nmap.org
+- Scanning scanme.nmap.org...
+- Port 53 -- OPEN
+- Scan complete!
+
+## Demo
+![Demo](demo.png)
 
 ## Challenges I faced
 The first version scanned ports one by one and was painfully slow : 1024 ports could take several minutes. I fixed this by adding threading so all ports are scanned in parallel. Massive speed improvement.
