@@ -32,6 +32,10 @@ The first version scanned ports one by one and was painfully slow : 1024 ports c
 ## Tested on
 scanme.nmap.org : a server provided by Nmap for legal scan practice.
 
+## CSV Export
+I felt every scan should produce a results report for reference : it gives a clear view of port history and what needs to be worked on. So I added CSV export functionality for clearer record keeping.
+
+Each scan auto-generates a CSV file with timestamp, target IP, port number, and status (OPEN/CLOSED).
+
 ## Future improvements
-- Save scan results to a file
 - Add banner grabbing to detect what service and version is running on each open port
