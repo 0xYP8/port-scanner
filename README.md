@@ -1,9 +1,13 @@
 # Port Scanner
 
-A simple Python port scanner I built while learning Python and experimenting with hands-on security tools to get real-world experience of how recon works.
+A multi-threaded Python port scanner I built as a hands-on exercise in network reconnaissance fundamentals - covering socket programming, concurrent I/O, and ethical scanning practice.
 
 ## What it does
-Scans all ports on a given IP and lists the ones that are open. Useful for getting a quick overview of a target's exposed services and identifying what could be improved from a security standpoint.
+Built to understand how attackers perform network reconnaissance as the first stage of the Cyber Kill Chain and how defenders can detect and block it.
+
+## Prerequisites
+- Python 3.9+
+- Standard library only (no external dependencies)
 
 ## How it works
 Uses Python's `socket` library to attempt a connection to each port. If the connection succeeds, the port is open. To make it fast, I used `threading` so multiple ports get scanned at the same time instead of one by one.
@@ -33,9 +37,7 @@ The first version scanned ports one by one and was painfully slow : 1024 ports c
 scanme.nmap.org : a server provided by Nmap for legal scan practice.
 
 ## CSV Export
-I felt every scan should produce a results report for reference : it gives a clear view of port history and what needs to be worked on. So I added CSV export functionality for clearer record keeping.
-
-Each scan auto-generates a CSV file with timestamp, target IP, port number, and status (OPEN/CLOSED).
+Each scan generates a CSV report with timestamp, target IP, port number, and status — for easy record-keeping across multiple scans.
 
 ## Future improvements
 - Add banner grabbing to detect what service and version is running on each open port
